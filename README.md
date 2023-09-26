@@ -1,6 +1,5 @@
 # rpi-docker-deconz
 
-# [deCONZ](https://phoscon.de)
 - [GitHub](https://github.com/dresden-elektronik/deconz-rest-plugin)
 - [Docker image](https://github.com/deconz-community/deconz-docker)
 - [Docker Hub](https://hub.docker.com/r/deconzcommunity/deconz)
