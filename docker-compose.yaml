@@ -1,0 +1,36 @@
+version: "3"
+services:
+  deconz:
+    image: deconzcommunity/deconz:stable
+    container_name: deconz
+    restart: always
+    privileged: true
+    ports: 
+      - 80:80
+      - 443:443
+      - 5900:5900
+    volumes:
+      - type: volume
+        source: deconz-nfs
+        target: /opt/deCONZ
+        volume:
+          nocopy: true
+    devices:
+      - /dev/ttyACM0
+    environment:
+      - DECONZ_WEB_PORT=80
+      - DECONZ_WS_PORT=443
+      - TZ=Europe/Berlin
+      - DECONZ_UPNP=0
+      - DECONZ_VNC_MODE=1
+      - DECONZ_VNC_PORT=5900
+      - DECONZ_VNC_PASSWORD=deCONZ
+      - DECONZ_UID=65534
+      - DECONZ_GID=65534
+volumes:
+  deconz-nfs:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.1.4,nolock,soft,rw"
+      device: ":/nfs/deconz2"
+
