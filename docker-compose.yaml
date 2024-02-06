@@ -1,7 +1,7 @@
 version: "3"
 services:
   deconz:
-    image: deconzcommunity/deconz:2.25.1
+    image: deconzcommunity/deconz:2.25.2
     container_name: deconz
     restart: always
     privileged: true
