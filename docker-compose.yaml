@@ -1,7 +1,7 @@
 version: "3"
 services:
   deconz:
-    image: ghcr.io/deconz-community/deconz-docker:2.25.2
+    image: ghcr.io/deconz-community/deconz-docker:2.25.3
     container_name: deconz
     restart: always
     privileged: true
