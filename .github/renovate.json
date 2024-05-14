@@ -1,9 +1,14 @@
 {
-  "extends": ["config:recommended","regexManagers:dockerfileVersions"],
+  "extends": [
+    "config:recommended",
+    "customManagers:dockerfileVersions"
+  ],
   "platform": "github",
   "configMigration": true,
   "automerge": true,
   "bumpVersion": "patch",
   "ignoreTests": true,
-  "repositories": ["0Bu/rpi-docker-deconz"]
+  "repositories": [
+    "0Bu/rpi-docker-deconz"
+  ]
 }
