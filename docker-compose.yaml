@@ -1,4 +1,3 @@
-version: "3"
 services:
   deconz:
     image: ghcr.io/deconz-community/deconz-docker:2.27.2
