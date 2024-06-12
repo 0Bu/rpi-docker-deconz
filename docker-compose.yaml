@@ -1,6 +1,6 @@
 services:
   deconz:
-    image: ghcr.io/deconz-community/deconz-docker:2.27.2
+    image: ghcr.io/deconz-community/deconz-docker:2.27.3
     container_name: deconz
     restart: always
     privileged: true
