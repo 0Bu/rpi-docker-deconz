@@ -1,6 +1,6 @@
 services:
   deconz:
-    image: ghcr.io/deconz-community/deconz-docker:2.27.4
+    image: ghcr.io/deconz-community/deconz-docker:2.26.3
     container_name: deconz
     restart: always
     privileged: true
@@ -16,7 +16,9 @@ services:
           nocopy: true
     devices:
       - /dev/ttyACM0
+      - /dev/ttyUSB0
     environment:
+      - DECONZ_BAUDRATE=115200
       - DECONZ_WEB_PORT=80
       - DECONZ_WS_PORT=443
       - TZ=Europe/Berlin
@@ -31,5 +33,5 @@ volumes:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.1.4,nolock,soft,rw"
-      device: ":/nfs/deconz2"
+      device: ":/nfs/deconz-pi3"
 
