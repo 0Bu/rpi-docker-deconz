@@ -1,6 +1,6 @@
 services:
   deconz:
-    image: ghcr.io/deconz-community/deconz-docker:stable@sha256:c6128b0dbbb2beed59d7113825cbab4490a8447e90ff6a9dd834d27f6ce4cb8c
+    image: ghcr.io/deconz-community/deconz-docker:stable@sha256:c29447ec3b1b0776850f2d706dcf3d1cdc8f7c461646ae06d4d268c78a86618d
     container_name: deconz
     restart: always
     privileged: true
