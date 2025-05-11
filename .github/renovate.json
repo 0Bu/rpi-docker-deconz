@@ -3,12 +3,8 @@
     "config:recommended",
     "customManagers:dockerfileVersions"
   ],
-  "platform": "github",
   "configMigration": true,
   "automerge": true,
   "bumpVersion": "patch",
-  "ignoreTests": true,
-  "repositories": [
-    "0Bu/rpi-docker-deconz"
-  ]
+  "ignoreTests": true
 }
